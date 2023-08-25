@@ -5,7 +5,7 @@ export const fetchUserById = async (req, res) => {
   try {
     const users = await User.findById(id, "name email id");
     res.status(200).json(users);
-  } catch (error) {
+  } catch (error) { 
     res.status(400).json(err);
   }
 };
